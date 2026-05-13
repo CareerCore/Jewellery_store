@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Jewelry | Fine Jewelry</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <h1 class="logo" id="home-logo">SA<span>.</span></h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#" id="nav-rings">Rings</a></li>
+                    <li><a href="#" id="nav-earings">Earrings</a></li>
+                    <li><a href="#" id="nav-neckles">Necklaces</a></li>
+                    <li><a href="#" id="nav-braclete">Bracelets</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <i class="fas fa-search" id="nav-search"></i>
+                <div style="position:relative; display:inline-flex; align-items:center;">
+                    <i class="fas fa-shopping-bag" id="nav-cart"></i>
+                    <span id="cart-badge" style="display:none; position:absolute; top:-8px; right:-10px; background:var(--gold); color:#fff; font-size:0.65rem; font-weight:700; width:18px; height:18px; border-radius:50%; align-items:center; justify-content:center; font-family:var(--font-body);">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Modal -->
+    <div id="search-modal" class="modal-overlay">
+        <div class="search-content">
+            <i class="fas fa-times modal-close" id="close-search" style="color: var(--text-main);"></i>
+            <h2>Search Collection</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search for rings, necklaces, etc...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div id="search-results" class="search-results-grid"></div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal-overlay">
+        <div class="search-content" style="max-width: 500px;">
+            <i class="fas fa-times modal-close" id="close-cart" style="color: var(--text-main);"></i>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items" style="padding: 1rem 0; color: var(--text-muted); font-size: 1.1rem; max-height: 55vh; overflow-y: auto;">
+                <div style="text-align:center; padding: 2rem 0;">
+                    <i class="fas fa-shopping-bag" style="font-size: 3rem; margin-bottom: 1.5rem; color: var(--border-light); display:block;"></i>
+                    Your cart is currently empty.
+                </div>
+            </div>
+            <div id="cart-total-section" style="display:none; border-top: 1px solid var(--border-light); padding-top: 1.5rem; margin-top: 0.5rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+                    <span style="font-family:var(--font-heading); font-size:1.1rem; color:var(--text-main); letter-spacing:2px;">TOTAL</span>
+                    <span id="cart-total-amount" style="color:var(--gold); font-weight:700; font-size:1.2rem;">Rs. 0</span>
+                </div>
+                <button class="btn" style="width:100%; background:var(--gold-gradient); color:#fff; border:none; padding:15px; font-size:1rem;" onclick="alert('Proceeding to checkout!')">Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="app-root">
+        <!-- Content dynamically injected by app.js -->
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <h3>SA<span>.</span></h3>
+                <p>Elegance in Every Detail. Discover handcrafted fine jewelry designed for the modern luxury connoisseur.</p>
+                <div class="socials">
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-tiktok"></i>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#categories">Collections</a></li>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Journal</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">Ring Sizing Guide</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col newsletter-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 SA Jewelry. All Rights Reserved.</p>
+            <div class="footer-policies">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal Container -->
+    <div id="video-modal" class="modal-overlay">
+        <div class="modal-content">
+            <i class="fas fa-times modal-close" id="close-modal"></i>
+            <video id="reel-video" class="modal-video" controls autoplay loop playsinline>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
