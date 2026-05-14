@@ -402,9 +402,8 @@ window.appScrollToCategories = function() {
 
 window.appOpenReelModal = function() {
     if(videoModal && reelVideo) {
-        // Placeholder product reel video URL - replace with real product reel MP4 later.
-        reelVideo.src = "https://www.w3schools.com/html/mov_bbb.mp4"; 
         videoModal.classList.add('active');
+        reelVideo.loop = true;
         reelVideo.play().catch(e => console.log('Video play error:', e));
     }
 };
