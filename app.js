@@ -246,7 +246,7 @@ function renderHome() {
     currentView = 'home';
     
     // User's provided video for the homepage
-    const heroVideoUrl = "../5705007-uhd_4096_2160_24fps.mp4"; 
+    const heroVideoUrl = "5705007-uhd_4096_2160_24fps.mp4"; 
     
     let html = `
         <div class="fade-in">
